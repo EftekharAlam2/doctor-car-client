@@ -1,12 +1,12 @@
 import Footer from "../SharedPage/Footer";
-import NavBar from "../SharedPage/Navbar";
+import About from "./Pages/About";
 import Banner from "./Pages/Banner";
 
 const Home = () => {
   return (
     <div>
-      <NavBar></NavBar>
       <Banner></Banner>
+      <About></About>
       <Footer></Footer>
     </div>
   );
