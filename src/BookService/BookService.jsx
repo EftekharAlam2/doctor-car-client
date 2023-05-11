@@ -6,13 +6,22 @@ const BookService = () => {
   const { user } = useContext(AuthContext);
   const service = useLoaderData();
 
-  const { title, price } = service;
+  const { title, price, _id } = service;
 
   const handleBookService = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const date = form.date.value;
+    const email = user?.email;
+    const order = {
+      customerName: name,
+      email,
+      date,
+      service: _id,
+      price: price,
+    };
+    console.log(order);
   };
 
   return (
