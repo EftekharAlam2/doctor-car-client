@@ -8,9 +8,7 @@ const NavBar = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {
-        localStorage.removeItem("doctor-car-token");
-      })
+      .then(() => {})
       .catch((error) => console.log(error));
   };
 
